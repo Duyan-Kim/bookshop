@@ -9,7 +9,6 @@
 
   /* size */
   --padding: 24px;
-  --avatar-size: 36px;
 
   /* font size */
   --font-giant: 48px;
@@ -64,7 +63,7 @@
 }
 
 .bestseller-item img {
-  width: 270px;
+  max-width: 100%;
   height: 340px;
 }
 
@@ -100,6 +99,30 @@
   color: var(--brown-Color);
 }
 
+.new-item img {
+  max-width: 100%;
+  height: 340px;
+}
+
+.new h2 {
+  color: var(--brown-Color);
+  font-weight: var(--bold);
+}
+
+.new p {
+  color: var(--black-Color);
+  font-size: var(--font-medium);
+}
+
+.new-item h5 {
+  color: var(--brown-Color);
+  font-weight: var(--semi-bold);
+}
+
+.new a:hover {
+  text-decoration: none;
+}
+
 /* footer */
 .about h2 {
   color: var(--brown-Color);
@@ -121,107 +144,4 @@
 .footer-contact i {
   font-size: var(--font-large);
   color: var(--grey-Color);
-}
-
-/* search info */
-.book-info {
-  margin-top: 56px;
-  line-height: 40px;
-}
-
-.book-info th {
-  color: var(--grey-Color);
-}
-
-.book-info img {
-  width: 350px;
-  filter: drop-shadow(5px 5px 5px var(--grey-Color));
-}
-
-.book-info h1 {
-  font-size: var(--font-giant);
-  font-weight: var(--bold);
-  color: var(--black-Color);
-}
-
-.book-info .price {
-  font-size: var(--font-large);
-  font-weight: var(--bold);
-  color: var(--brown-Color);
-}
-
-.book-description {
-  padding-top: 56px;
-  padding-bottom: 56px;
-}
-
-.book-info h2 {
-  font-size: var(--font-large);
-  font-weight: var(--bold);
-  color: var(--brown-Color);
-  margin-bottom: 20px;
-}
-
-.recommend a:hover {
-  text-decoration: none;
-}
-
-.recommend h2 {
-  color: var(--brown-Color);
-  font-weight: var(--bold);
-}
-
-.recommend-item h5 {
-  color: var(--brown-Color);
-  font-weight: var(--semi-bold);
-}
-
-.recommend-item p {
-  color: var(--black-Color);
-  font-size: var(--font-medium);
-}
-
-.recommend-item img {
-  width: 270px;
-  height: 340px;
-}
-
-/* search */
-.shop .container {
-  margin-top: 150px;
-}
-
-.shop h2 {
-  font-weight: var(--bold);
-  color: var(--brown-Color);
-}
-
-.booklist .book-shortinfo a:hover {
-  text-decoration: none;
-}
-
-.book-shortinfo .book-title {
-  font-weight: var(--bold);
-  color: var(--black-Color);
-  margin-bottom: var(--padding);
-}
-
-.book-shortinfo .book-author,
-.book-publisher,
-.book-publish-date,
-.book-salespoint {
-  font-size: var(--font-medium);
-  font-weight: var(--regular);
-  color: var(--black-Color);
-}
-
-.book-shortinfo .book-price {
-  font-size: var(--font-large);
-  font-weight: var(--semi-bold);
-  color: var(--brown-Color);
-}
-
-.booklist table {
-  margin-top: 24px;
-  margin-bottom: 24px;
 }
