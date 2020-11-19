@@ -1,8 +1,10 @@
 const ESLintPlugin = require("eslint-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 module.exports = {
+  devtool: "eval-cheap-source-map",
   entry: {
     index: "./src/index.js",
   },
@@ -14,6 +16,12 @@ module.exports = {
   ],
   devServer: {
     port: 8080,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+  },
+  externals: {
+    axios: "axios",
   },
   mode: "development",
   output: {
@@ -22,8 +30,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.m?js$/,
         exclude: /node_modules/,
+        test: /\.m?js$/,
         use: {
           loader: "babel-loader",
           options: {
