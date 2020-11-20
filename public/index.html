@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../src/style2.scss">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -52,7 +53,7 @@
     </nav>
 
     <!-- header -->
-    <header>
+    <header class="slider">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -61,24 +62,24 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="../img/kid3_resize700.jpg" alt="First slide">
+                    <img class="d-block w-100" src="../img/kid3_resize700.jpg">
                     <div class="carousel-caption d-none d-md-block text-left">
-                        <h5 class="header-text">읽고 쓰고 글자와 친해져요</h5>
-                        <p class="header-text"><a href="#" class="newbook">신간도서 보러가기</a></p>
+                        <h5>읽고 쓰고 글자와 친해져요</h5>
+                        <p><a href="#">신간도서 보러가기</a></p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="../img/kid4_resize700.jpg" alt="Second slide">
+                    <img class="d-block w-100" src="../img/kid4_resize700.jpg" >
                     <div class="carousel-caption d-none d-md-block text-left">
-                        <h5 class="header-text">읽고 쓰고 글자와 친해져요</h5>
-                        <p class="header-text"><a href="#" class="newbook">신간도서 보러가기</a></p>
+                        <h5>읽고 쓰고 글자와 친해져요</h5>
+                        <p><a href="#">신간도서 보러가기</a></p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="../img/kid1_resize700.jpg" alt="Third slide">
+                    <img class="d-block w-100" src="../img/kid1_resize700.jpg">
                     <div class="carousel-caption d-none d-md-block text-left">
-                        <h5 class="header-text">읽고 쓰고 글자와 친해져요</h5>
-                        <p class="header-text"><a href="#" class="newbook">신간도서 보러가기</a></p>
+                        <h5>읽고 쓰고 글자와 친해져요</h5>
+                        <p><a href="#">신간도서 보러가기</a></p>
                     </div>
                 </div>
             </div>
@@ -95,26 +96,12 @@
 
     <!-- main -->
     <main>
-        <!-- bestseller -->
-        <section class="bestseller">
-            <h2 class="text-center mt-5 pt-3">베스트셀러</h2>
-            <p class="text-center mt-3 mb-5">이번주 베스트셀러</p>
-            <div class="container mb-5">
-                <div class="row text-center">
-                    <div class="col-lg-3 col-md-6 m-0">
-                        <a href="" class="bestseller-item">
-                            <img src="../img/cover4.jpg" alt="" class="bestseller-thumbnail">
-                            <h5 class="bestseller-title text-center mt-3">돼지책</h5>
-                            <p class="bestseller-title text-center">앤서니 브라운</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 m-0">
-                        <a href="" class="bestseller-item">
-                            <img src="../img/cover4.jpg" alt="" class="bestseller-thumbnail">
-                            <h5 class="bestseller-title text-center mt-3">돼지책</h5>
-                            <p class="bestseller-title text-center">앤서니 브라운</p>
-                        </a>
-                    </div>
+        <!-- baby bestseller -->
+        <section class="bestseller baby text-center">
+            <h2 class="mt-5 pt-5">유아 베스트셀러</h2>
+            <p class="mt-3 mb-5 pb-3" id="babyPubDate"></p>
+            <div class="container  mb-5">
+                <div class="row" id="baby-Bestseller-item">
                 </div>
             </div>
         </section>
@@ -123,99 +110,21 @@
         <section class="bookclub bg-light p-5">
             <div class="container">
                 <div class="bookclub-text">
-                    <h2 class="text-center mt-5">어린이책방 북클럽</h2>
-                    <p class="text-center mt-3 mb-5">어린이책방에서는 매주 책과 함께하는 행사를 해요<br>북클럽에서 새로운 이야기를 만나요</p>
+                    <h2 class="text-center mt-5">내용을 수정중이에요</h2>
+                    <p class="text-center mt-3 mb-5">소제목</p>
                 </div>
-                <div class="row">
-                    <div class="card col-md-6 col-lg-4 col-sm-12 bg-white m-3">
-                        <div class="content card-body pt-5">
-                            <h5 class="card-title pb-3">
-                                <a href="">손으로 만드는 나만의 팝업북</a>
-                            </h5>
-                            <p class="card-text mb-4">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ut eveniet atque
-                                deleniti perferendis unde
-                            </p>
-                            <hr>
-                            <p class="card-text text-right mt-4 card-date">
-                                12월 8일 화요일 5시
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card col-md-6 col-lg-4 col-sm-12 bg-white m-3">
-                        <div class="content card-body pt-5">
-                            <h5 class="card-title pb-3">
-                                <a href="">그림으로 이어말해요</a>
-                            </h5>
-                            <p class="card-text mb-4">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ut eveniet atque
-                                deleniti perferendis unde
-                            </p>
-                            <hr>
-                            <p class="card-text text-right mt-4 card-date">
-                                12월 9일 수요일 5시
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <div class="card col-md-6 col-lg-4 col-sm-12 bg-white m-3">
-                        <div class="content card-body pt-5">
-                            <h5 class="card-title pb-3">
-                                <a href="">크리스마스 이야기 보따리</a>
-                            </h5>
-                            <p class="card-text mb-4">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ut eveniet atque
-                                deleniti perferendis unde
-                            </p>
-                            <hr>
-                            <p class="card-text text-right mt-4 card-date">
-                                12월 23일 수요일 5시
-                            </p>
-                        </div>
-                    </div>
+                
                 </div>
             </div>
         </section>
 
-        <!-- new -->
-        <section class="new">
-            <h2 class="text-center mt-5 pt-3">신간도서</h2>
-            <p class="text-center mt-3 mb-5">이번주 신간도서</p>
-            <div class="container mb-5">
-
-                <div class="row text-center">
-                    <div class="col-lg-3 col-md-6 m-0">
-                        <a href="" class="new-item">
-                            <img src="../img/cover3.jpg" alt="" class="bestseller-thumbnail">
-                            <h5 class="bestseller-title text-center mt-3">딩동</h5>
-                            <p class="bestseller-title text-center">릴리아</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 m-0">
-                        <a href="" class="new-item">
-                            <img src="../img/cover3.jpg" alt="" class="bestseller-thumbnail">
-                            <h5 class="bestseller-title text-center mt-3">딩동</h5>
-                            <p class="bestseller-title text-center">릴리아</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 m-0">
-                        <a href="" class="new-item">
-                            <img src="../img/cover3.jpg" alt="" class="bestseller-thumbnail">
-                            <h5 class="bestseller-title text-center mt-3">딩동</h5>
-                            <p class="bestseller-title text-center">릴리아</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 m-0">
-                        <a href="" class="new-item">
-                            <img src="../img/cover3.jpg" alt="" class="bestseller-thumbnail">
-                            <h5 class="bestseller-title text-center mt-3">딩동</h5>
-                            <p class="bestseller-title text-center">릴리아</p>
-                        </a>
-                    </div>
+        <!-- kid bestseller -->
+        <section class="bestseller kid text-center">
+            <h2 class="mt-5 pt-5">아동 베스트셀러</h2>
+            <p class="mt-3 mb-5 pb-3" id="kidPubDate"></p>
+            <div class="container  mb-5">
+                <div class="row" id="kid-Bestseller-item">
                 </div>
-
-
             </div>
         </section>
     </main>
@@ -249,5 +158,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
-
+    <script type="module" src="../src/index.js"></script>
 </html>
