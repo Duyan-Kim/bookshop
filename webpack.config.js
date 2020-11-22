@@ -20,9 +20,6 @@ module.exports = {
       "Access-Control-Allow-Origin": "*",
     },
   },
-  externals: {
-    axios: "axios",
-  },
   mode: "development",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -38,6 +35,10 @@ module.exports = {
             presets: ["@babel/preset-env"],
           },
         },
+      },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },
