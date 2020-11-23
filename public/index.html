@@ -13,6 +13,7 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="../src/style2.scss">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
 </head>
 
 <body>
@@ -45,9 +46,9 @@
                     </div>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="책 검색" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">검색</button>
+            <form class="form-inline my-2 my-lg-0 search-form" action="">
+                <input class="form-control mr-sm-2 search-input" type="search" placeholder="책 검색" aria-label="Search">
+                
             </form>
         </div>
     </nav>
@@ -72,14 +73,14 @@
                     <img class="d-block w-100" src="../img/kid4_resize700.jpg" >
                     <div class="carousel-caption d-none d-md-block text-left">
                         <h5>읽고 쓰고 글자와 친해져요</h5>
-                        <p><a href="#">신간도서 보러가기</a></p>
+                        <p><a href="#">추천도서 보러가기</a></p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="../img/kid1_resize700.jpg">
                     <div class="carousel-caption d-none d-md-block text-left">
                         <h5>읽고 쓰고 글자와 친해져요</h5>
-                        <p><a href="#">신간도서 보러가기</a></p>
+                        <p><a href="#">도서관 대여 순위 보러가기</a></p>
                     </div>
                 </div>
             </div>
@@ -106,16 +107,50 @@
             </div>
         </section>
 
-        <!-- bookclub -->
-        <section class="bookclub bg-light p-5">
-            <div class="container">
-                <div class="bookclub-text">
-                    <h2 class="text-center mt-5">내용을 수정중이에요</h2>
-                    <p class="text-center mt-3 mb-5">소제목</p>
-                </div>
+        <!-- buttons -->
+        <section class="buttons bg-light p-5">
+            <div class="container text-center">
+                <div class="inner-container m-5">
+                    <div class="row no-gutters">
+                        <div class="col-lg-4">
+                            <div class="box">
+                                <div class="icon">
+                                    <img src="../img/newicon.svg">
+                                </div>
+                                <h3>신간도서</h3>
+                                <p>11월 셋째주 입고 도서</p>
+                                <a href="contact.html" class="btn">보기</a>
+                            </div><!-- box -->
+                        </div><!-- col-lg-4 -->
+                            
+                        <div class="col-lg-4">
+                            <div class="box" id="secondBox">
+                                <div class="icon">
+                                    <img src="../img/rankicon.svg">
+                                </div>
+                                <h3>전국 도서관 대여 순위</h3>
+                                <p>2020년 최다 대출 도서 TOP 100</p>
+                                <a href="contact.html" id="secondA" class="btn">보기</a>
+                            </div><!-- box -->
+                        </div><!-- col-lg-4 -->
+
+                        <div class="col-lg-4">
+                            <div class="box">
+                                <div class="icon">
+                                    <img src="../img/recommendicon.svg">
+                                </div>
+                                <h3>추천도서</h3>
+                                <p>인터파크 선정 추천도서</p>
+                                <a href="contact.html" class="btn">보기</a>
+                            </div><!-- box -->
+                        </div><!-- col-lg-4 -->
+
+                    </div><!-- /.row -->
+                </div><!-- /.inner-container -->
+            </div><!-- /.container -->
+            
                 
-                </div>
-            </div>
+            </section>
         </section>
 
         <!-- kid bestseller -->
@@ -130,14 +165,14 @@
     </main>
 
     <!-- footer -->
-    <footer>
-        <div class="about">
+    <footer class="logo">
             <div class="bg-light">
-                <div class="container col-6 p-5">
-                    <h2 class="text-center mt-3">어린이책방은</h2>
-                    <p class="text-center mt-4 mb-2">아동 도서를 소개하고 있어요. Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Eum nisi magnam aut reprehenderit harum ad praesentium delectus voluptatem aliquid
-                        dignissimos facilis, voluptate eveniet minima culpa at reiciendis vero deleniti fugit?</p>
+                <div class="container">
+                    <div class="box text-center">
+                        <div class="footer-icon">
+                            <img src="../img/bookicon.svg">
+                        </div>
+                    </div>
                 </div>
                 <div class="container footer-contact">
                     <div class="icon text-center mb-4">
@@ -149,7 +184,6 @@
                     <p class="text-center pb-3">aaaaaaaa@gmail.com</p>
                 </div>
             </div>
-        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
