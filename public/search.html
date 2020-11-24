@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../src/search.css">
+    <link rel="stylesheet" href="../src/search.scss">
 </head>
 
 <body>
@@ -34,13 +34,13 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        북클럽
+                        도서 차트
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">진행중인 북클럽</a>
-                        <a class="dropdown-item" href="#">가입하기</a>
+                        <a class="dropdown-item" href="#">신간도서</a>
+                        <a class="dropdown-item" href="#">추천도서</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">동네서점 찾기</a>
+                        <a class="dropdown-item" href="#">도서관 TOP100</a>
                     </div>
                 </li>
             </ul>
@@ -52,143 +52,85 @@
     </nav>
 
     <!-- header -->
-    <header class="shop">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 mb-5">
-                    <div class="text-center">
-                        <h2 class="bradcaump-title">검색결과</h2>
-                    </div>
-                </div>
-            </div>
-            <hr>
-        </div>
+    <header>
+        <div>검색결과</div>
     </header>
 
     <!-- main -->
-    <main class="booklist">
-        <div class="container mt-5">
-        <table width="100%">
-            <colgroup>
-                <col width="330">
-                <col width="700">
-            </colgroup>
-            <tbody>
-                <tr>
-                    <td class="book-img">
-                        <a href="" class="search-link">
-                            <img src="../img/cover2.jpg" alt="">
-                        </a>
-                    </td>
-                    <td class="book-shortinfo">
-                        <a href="" class="search-link">
-                            <h1 class="book-title">
-                                알사탕
-                            </h1>
-                            <p class="book-price">
-                                12,000원
-                            </p>
-                            <p class="book-author">
-                                백희나
-                            </p>
-                            <p class="book-publisher">
-                                책읽는곰
-                            </p>
-                            <p class="book-publish-date">
-                                2017년 03월 25일
-                            </p>
-                            <p class="book-salespoint">
-                                9.7점
-                            </p>
-                        </a> 
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <hr>
-        <table width="100%">
-            <colgroup>
-                <col width="330">
-                <col width="700">
-            </colgroup>
-            <tbody>
-                <tr>
-                    <td class="book-img">
-                        <a href="" class="search-link">
-                            <img src="../img/cover2.jpg" alt="">
-                        </a>
-                    </td>
-                    <td class="book-shortinfo">
-                        <a href="" class="search-link">
-                            <h1 class="book-title">
-                                알사탕
-                            </h1>
-                            <p class="book-price">
-                                12,000원
-                            </p>
-                            <p class="book-author">
-                                백희나
-                            </p>
-                            <p class="book-publisher">
-                                책읽는곰
-                            </p>
-                            <p class="book-publish-date">
-                                2017년 03월 25일
-                            </p>
-                            <p class="book-salespoint">
-                                9.7점
-                            </p>
-                        </a> 
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <hr>
-        <table width="100%">
-            <colgroup>
-                <col width="330">
-                <col width="700">
-            </colgroup>
-            <tbody>
-                <tr>
-                    <td class="book-img">
-                        <a href="" class="search-link">
-                            <img src="../img/cover2.jpg" alt="">
-                        </a>
-                    </td>
-                    <td class="book-shortinfo">
-                        <a href="" class="search-link">
-                            <h1 class="book-title">
-                                알사탕
-                            </h1>
-                            <p class="book-price">
-                                12,000원
-                            </p>
-                            <p class="book-author">
-                                백희나
-                            </p>
-                            <p class="book-publisher">
-                                책읽는곰
-                            </p>
-                            <p class="book-publish-date">
-                                2017년 03월 25일
-                            </p>
-                            <p class="book-salespoint">
-                                9.7점
-                            </p>
-                        </a> 
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <main>
+        <div class="container">
+            <div class="search-result">
+                <table width="100%">
+                    <colgroup>
+                        <col width="330">
+                        <col width="700">
+                    </colgroup>
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                <a href="" class="search-link">
+                                    <img src="../img/cover2.jpg" alt="">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="" class="search-link">
+                                    <h1 class="book-title">
+                                        알사탕
+                                    </h1>
+                                    <p class="book-price">
+                                        12,000원
+                                    </p>
+                                    <p class="book-author">
+                                        백희나
+                                    </p>
+                                    <span class="book-publisher">
+                                        책읽는곰
+                                    </span>
+                                    <span class="book-publish-date">
+                                        2017년 03월 25일
+                                    </span>
+
+                                </a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
     </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="container mt-5 pt-5">
+            <div class="text-center">
+                <div class="footer-logo">
+                    <img src="../img/bookicon.svg">
+                </div>
+                <hr>
+                <span>어린이책방</span>
+            </div>
+            <div class="footer-contact">
+                <p>arbolkim@gmail.com</p>
+                <div class="footer-icon">
+                    <a href="" class="icon"><i class="fas fa-phone-alt m-3"></i></a>
+                    <a href="" class="icon"><i class="fab fa-google m-3"></i></a>
+                    <a href="" class="icon"><i class="fab fa-instagram m-3"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
+    <script type="module" src="../src/search.js"></script>
 </body>
 
 </html>

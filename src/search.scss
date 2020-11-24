@@ -1,0 +1,143 @@
+/* color */
+$brown-Color: #ce7852;
+$dark-black-Color: #191919;
+$black-Color: #333333;
+$grey-Color: #686767;
+$grey-light-Color: #f6f6f6;
+$white-Color: #ffffff;
+
+/* font size */
+$font-giant: 36px;
+$font-large: 24px;
+$font-medium: 16px;
+$font-small: 14px;
+
+/* font weight */
+$bold: 700;
+$semi-bold: 500;
+$regular: 400;
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  padding: 0;
+  margin: 0;
+
+  header {
+    width: auto;
+    height: 500px;
+    background-size: 100%;
+    background-image: url('../img/background2_700.jpg');
+    background-attachment: fixed;
+    div {
+      position: absolute;
+      top: 200px;
+      right: 50%;
+      z-index: 1;
+      font-size: $font-large;
+      font-weight: $bold;
+      color: white;
+    }
+  }
+
+  main {
+    background-color: $grey-light-Color;
+    padding: 70px 0 70px 0;
+
+    .container {
+      .search-result {
+        width: 1080px;
+        height: 340px;
+        background-color: $white-Color;
+        padding: 45px 60px;
+        margin-bottom: 30px;
+        &:hover {
+          box-shadow: 0 0 20px rgba(33, 33, 33, 0.2);
+          transition: all 500ms ease;
+        }
+        td {
+          a:hover {
+            text-decoration: none;
+          }
+          img {
+            .search-result img {
+              width: 240px;
+              height: auto;
+              border-radius: 10%;
+            }
+          }
+          .book-title {
+            font-weight: $bold;
+            color: $black-Color;
+            font-size: $font-large;
+          }
+          .book-price {
+            font-size: $font-medium;
+            font-weight: $semi-bold;
+            color: $brown-Color;
+          }
+          .book-author,
+          .book-publisher,
+          .book-publish-date,
+          .book-salespoint {
+            font-size: $font-medium;
+            font-weight: $regular;
+            color: $black-Color;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .container {
+      .footer-logo {
+        position: relative;
+        z-index: 2;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: $brown-Color;
+        margin: 0 auto;
+        img {
+          width: 40px;
+          height: 40px;
+          margin: 10px;
+          filter: invert(100%) sepia(0%) saturate(1844%) hue-rotate(71deg) brightness(113%)
+            contrast(93%);
+        }
+      }
+      hr {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        top: -30px;
+        margin-bottom: 10px;
+      }
+      span {
+        font-weight: $bold;
+        color: $brown-Color;
+        font-size: $font-large;
+      }
+    }
+    .footer-contact {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin-bottom: 12px;
+      p {
+        font-size: $font-small;
+        padding-top: 16px;
+        color: $grey-Color;
+        margin: 0;
+      }
+      .footer-icon {
+        padding: 0;
+        margin: 0;
+        i {
+          color: $grey-Color;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

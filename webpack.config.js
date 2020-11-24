@@ -1,28 +1,30 @@
-const ESLintPlugin = require("eslint-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
-const path = require("path");
+const ESLintPlugin = require('eslint-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-  devtool: "eval-cheap-source-map",
+  devtool: 'eval-cheap-source-map',
   entry: {
-    index: "./src/index.js",
+    index: './src/index.js',
+    search: './src/search.js',
+    info: './src/info.js'
   },
   plugins: [
     new ESLintPlugin({ fix: true }),
     new HtmlWebpackPlugin({
-      template: "public/index.html",
-    }),
+      template: 'public/index.html'
+    })
   ],
   devServer: {
     port: 8080,
     headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
+      'Access-Control-Allow-Origin': '*'
+    }
   },
-  mode: "development",
+  mode: 'development',
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
@@ -30,16 +32,24 @@ module.exports = {
         exclude: /node_modules/,
         test: /\.m?js$/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env"],
-          },
-        },
+            presets: ['@babel/preset-env']
+          }
+        }
       },
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
-    ],
-  },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader'
+          }
+        ]
+      }
+    ]
+  }
 };
