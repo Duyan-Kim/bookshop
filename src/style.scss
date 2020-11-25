@@ -91,6 +91,10 @@ $regular: 400;
     display: block;
   }
 
+  .display-none {
+    display: none;
+  }
+
   .buttons .container {
     .inner-container {
       #secondBox {
@@ -108,7 +112,7 @@ $regular: 400;
         p {
           color: $grey-light-Color;
         }
-        a {
+        button {
           border: 2px solid $grey-light-Color;
           background-color: $grey-light-Color;
           color: $black-Color;
@@ -148,7 +152,7 @@ $regular: 400;
           color: $grey-Color;
           font-weight: $regular;
         }
-        a {
+        button {
           margin-top: 18px;
           padding: 6px 26px;
           border: 2px solid $grey-light-Color;

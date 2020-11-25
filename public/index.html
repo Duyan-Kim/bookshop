@@ -38,16 +38,16 @@
                         도서차트
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">신간도서</a>
+                        <a class="dropdown-item" href="#" id="menuBtn1">신간도서</a>
                         <a class="dropdown-item" href="#">추천도서</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">도서관 TOP100</a>
+                        <a class="dropdown-item" href="#">원서 베스트셀러</a>
                     </div>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0 search-form" action="">
                 <input class="form-control mr-sm-2" type="search" placeholder="책 검색" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">검색</button>
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit" id="inputValue">검색</button>
             </form>
         </div>
     </nav>
@@ -79,7 +79,7 @@
                     <img class="d-block w-100" src="../img/kid1_resize700.jpg">
                     <div class="carousel-caption d-none d-md-block text-left">
                         <h5>읽고 쓰고 글자와 친해져요</h5>
-                        <p><a href="#">도서관 대여 순위 보러가기</a></p>
+                        <p><a href="#">원서 보러가기</a></p>
                     </div>
                 </div>
             </div>
@@ -114,22 +114,22 @@
                         <div class="col-lg-4">
                             <div class="box">
                                 <div class="icon">
-                                    <img src="../img/newicon.svg">
+                                    <img src="../img/rankicon.svg">
                                 </div>
-                                <h3>신간도서</h3>
-                                <p>11월 셋째주 입고 도서</p>
-                                <a href="#" class="btn">보기</a>
+                                <h3>아동 베스트셀러</h3>
+                                <p>11월 셋째주</p>
+                                <button id="newBtn">보기</button>
                             </div>
                         </div>
 
                         <div class="col-lg-4">
                             <div class="box" id="secondBox">
                                 <div class="icon">
-                                    <img src="../img/rankicon.svg">
+                                    <img src="../img/newicon.svg">
                                 </div>
-                                <h3>전국 도서관 대여 순위</h3>
-                                <p>2020년 최다 대출 도서 TOP 100</p>
-                                <a href="#" id="secondA" class="btn">보기</a>
+                                <h3>신간도서</h3>
+                                <p>11월 셋째주 입고 도서</p>
+                                <button id="rankBtn">보기</button>
                             </div>
                         </div>
 
@@ -138,26 +138,41 @@
                                 <div class="icon">
                                     <img src="../img/recommendicon.svg">
                                 </div>
-                                <h3>추천도서</h3>
-                                <p>인터파크 선정 추천도서</p>
-                                <a href="#" class="btn">보기</a>
+                                <h3>원서 베스트셀러</h3>
+                                <p>어린이 그림책 부문</p>
+                                <button id="recommendBtn">보기</button>
                             </div>
                         </div>
-
                     </div><!-- row -->
                 </div><!-- inner-container -->
             </div><!-- container -->
-
-
-        </section>
         </section>
 
         <!-- kid bestseller -->
         <section class="layout8 text-center">
+            <div id="kid-bestSeller-box">
             <h2 class="mt-5 pt-5">아동 베스트셀러</h2>
-            <p class="mt-3 mb-5 pb-3" id="kidPubDate"></p>
-            <div class="container  mb-5">
-                <div class="row" id="kid-Bestseller-item">
+                <p class="mt-3 mb-5 pb-3" id="kidPubDate"></p>
+                <div class="container  mb-5">
+                    <div class="row" id="kid-Bestseller-item">
+                    </div>
+                </div>
+            </div>
+            <div id="new-book-box">
+                <h2 class="mt-5 pt-5">신간도서</h2>
+                <p class="mt-3 mb-5 pb-3" id="newPubDate"></p>
+                <div class="container  mb-5">
+                    <div class="row" id="new-item">
+                    </div>
+                </div>
+            </div>
+
+            <div id="recommend-book-box">
+                <h2 class="mt-5 pt-5">원서 베스트셀러</h2>
+                <p class="mt-3 mb-5 pb-3" id="recommendPubDate"></p>
+                <div class="container  mb-5">
+                    <div class="row" id="recommend-item">
+                    </div>
                 </div>
             </div>
         </section>
@@ -192,4 +207,5 @@
         crossorigin="anonymous"></script>
     <script type="module" src="../src/index.js"></script>
 </body>
+
 </html>
