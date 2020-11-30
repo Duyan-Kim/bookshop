@@ -1,6 +1,6 @@
 const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+
 const path = require('path');
 
 module.exports = {
@@ -13,14 +13,24 @@ module.exports = {
   plugins: [
     new ESLintPlugin({ fix: true }),
     new HtmlWebpackPlugin({
-      template: 'public/index.html'
+      filename: 'index.html',
+      template: 'public/index.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'info.html',
+      template: 'public/info.html',
+      chunks: ['info']
     })
   ],
   devServer: {
     port: 8080,
-    headers: {
-      'Access-Control-Allow-Origin': '*'
-    }
+    proxy: {
+      '/api': {
+        target: 'http://book.interpark.com'
+      }
+    },
+    hot: true
   },
   mode: 'development',
   output: {

@@ -1,15 +1,13 @@
-import { API_KEY } from '../constant.js';
-
-const baby = 109;
-const kid = 110;
+import { API_KEY, NYT_KEY, BABY, KID } from '../constant.js';
+import axios from 'axios';
 
 export function getBabyBestSeller() {
   return axios({
     method: 'GET',
-    url: 'http://book.interpark.com/api/bestSeller.api',
+    url: '/api/bestSeller.api',
     params: {
       key: API_KEY,
-      categoryId: baby,
+      categoryId: BABY,
       output: 'json'
     }
   });
@@ -18,10 +16,10 @@ export function getBabyBestSeller() {
 export function getKidBestSeller() {
   return axios({
     method: 'GET',
-    url: 'http://book.interpark.com/api/bestSeller.api',
+    url: '/api/bestSeller.api',
     params: {
       key: API_KEY,
-      categoryId: kid,
+      categoryId: KID,
       output: 'json'
     }
   });
@@ -30,11 +28,33 @@ export function getKidBestSeller() {
 export function getRecommended() {
   return axios({
     method: 'GET',
-    url: 'http://book.interpark.com/api/recommend.api',
+    url: '/api/recommend.api',
     params: {
       key: API_KEY,
-      categoryId: 109,
+      categoryId: BABY,
       output: 'json'
+    }
+  });
+}
+
+export function getNewItem() {
+  return axios({
+    method: 'GET',
+    url: '/api/newBook.api',
+    params: {
+      key: API_KEY,
+      categoryId: BABY,
+      output: 'json'
+    }
+  });
+}
+
+export function getNytSeriesBookBestSeller() {
+  return axios({
+    method: 'GET',
+    url: 'https://api.nytimes.com/svc/books/v3/lists/current/series-books.json',
+    params: {
+      'api-key': NYT_KEY
     }
   });
 }

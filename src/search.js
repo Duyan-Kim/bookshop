@@ -1,1 +1,1 @@
-import from "./search.scss"
+import './search.scss';

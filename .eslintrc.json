@@ -1,15 +1,16 @@
-module.exports = {
-  env: {
+{ 
+  "env": {
     "browser": true,
-    "node": true,
+    "node": true
   },
-  parserOptions: {
+  "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module"
   },
-  extends: ["eslint:recommended", "eslint-config-prettier"],
-  plugins: ["prettier"],
-  rules: {
-    "prettier/prettier": "error",
-  },
-};
+  "parser": "babel-eslint",
+  "extends": ["eslint:recommended", "eslint-config-prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error"
+  }
+}

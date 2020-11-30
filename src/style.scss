@@ -10,7 +10,7 @@ $white-Color: #ffffff;
 $font-giant: 36px;
 $font-large: 24px;
 $font-medium: 16px;
-$font-small: 14px;
+$font-small: 12px;
 
 /* font weight */
 $bold: 700;
@@ -22,73 +22,33 @@ $regular: 400;
   padding: 0;
   margin: 0;
 
-  .book-info {
-    margin-top: 56px;
-    line-height: 40px;
-    padding: 60px;
-    img {
-      width: 350px;
-      filter: drop-shadow(5px 5px 5px var(--grey-Color));
-    }
-    .book-info-text {
-      padding: 20px;
-      margin-top: 20px;
-      th {
-        color: $grey-Color;
-      }
-      h1 {
-        font-size: $font-giant;
-        font-weight: $bold;
-        color: $black-Color;
-      }
-      .price {
-        font-size: $font-large;
-        font-weight: $bold;
-        color: $brown-Color;
-        margin-bottom: 15px;
-      }
-      .shoppingBtn {
-        padding-top: 15px;
-        a {
-          padding: 10px;
-          border-radius: 5%;
-          border: 2px solid $black-Color;
-          background-color: $black-Color;
-          color: $white-Color;
-          &:hover {
-            background-color: $brown-Color;
-            border: 2px solid $brown-Color;
-            color: $white-Color;
-            text-decoration: none;
-            transform: translate(-50%, -50%);
+  .slider {
+    .carousel-item {
+      .carousel-caption {
+        h5 {
+          font: {
+            size: $font-giant;
+            weight: $bold;
           }
+        }
+        a {
+          font: {
+            size: $font-large;
+            weight: $semi-bold;
+          }
+          color: $white-Color;
+        }
+        p {
+          padding-bottom: 150px;
         }
       }
     }
   }
 
-  .book-description .container {
-    margin-top: 50px;
-    padding: 80px;
-    border: 1px solid $grey-Color;
-
-    h3 {
-      font-size: $font-large;
-      font-weight: $bold;
-      color: $brown-Color;
-      margin-bottom: 50px;
-    }
-    p {
-      font-size: $font-medium;
-      line-height: 250%;
-    }
-  }
-
-  .info-recommend {
+  .layout8 {
     h2 {
       color: $brown-Color;
       font-weight: $bold;
-      margin-bottom: 30px;
     }
     a {
       &:hover {
@@ -123,6 +83,61 @@ $regular: 400;
       p {
         color: $grey-Color;
         font-size: $font-medium;
+      }
+    }
+  }
+
+  .menu-buttons {
+    #second-box {
+      background-color: $black-Color;
+      h3,
+      p {
+        color: $grey-light-Color;
+      }
+    }
+    .button-box {
+      padding: 70px 0 60px 0;
+      background-color: $white-Color;
+
+      .icon {
+        position: relative;
+        z-index: 2;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: $brown-Color;
+        margin: 0 auto;
+        img {
+          width: 40px;
+          height: 40px;
+          margin: 15px;
+          filter: invert(100%) sepia(0%) saturate(1844%) hue-rotate(71deg) brightness(113%)
+            contrast(93%);
+        }
+      }
+      h3 {
+        margin: 20px 0 10px 0;
+        font-weight: 500;
+        color: $black-Color;
+        font-size: $font-large;
+      }
+      p {
+        color: $grey-Color;
+        font-size: $font-medium;
+      }
+      a {
+        margin-top: 20px;
+        padding: 10px 20px 10px 20px;
+        border-radius: 5%;
+        border: 2px solid $grey-light-Color;
+        background-color: $grey-light-Color;
+        color: $black-Color;
+        &:hover {
+          background-color: $grey-Color;
+          border: 2px solid $grey-Color;
+          color: $white-Color;
+          text-decoration: none;
+        }
       }
     }
   }
