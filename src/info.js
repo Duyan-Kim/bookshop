@@ -2,6 +2,7 @@ import './info.scss';
 import { getRecommended } from './api/index.js';
 
 const recommendItem = document.getElementById('recommend-item');
+const selectedBook = document.getElementById('book-0');
 
 getRecommended()
   .then((res) => {
