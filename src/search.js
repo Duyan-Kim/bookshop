@@ -1,6 +1,7 @@
 import './search.scss';
 import { KAKAO_KEY } from './constant.js';
 import axios from 'axios';
+import { goToInfo } from './info.js';
 
 const form = document.getElementById('form');
 const searchResult = document.getElementById('search-result');
@@ -21,7 +22,6 @@ form.addEventListener('submit', function (e) {
   }
   searchData()
     .then((res) => {
-      console.log(res.data.documents);
       let searchItemArr = res.data.documents;
       return getSearchResult(searchItemArr);
     })
@@ -32,8 +32,8 @@ form.addEventListener('submit', function (e) {
 
 const getSearchResult = (bookTitles) => {
   const htmlString = bookTitles
-    .map((book, index) => {
-      return `<table width="100%" id=book-info${index}>
+    .map((book) => {
+      return `<table width="100%">
         <tbody>
             <colgroup>
                 <col width="350">
@@ -45,7 +45,7 @@ const getSearchResult = (bookTitles) => {
                 </td>
                 <td>
                     
-                        <h1 class="book-title" id=book-${index}>
+                        <h1 class="book-title">
                             ${book.title}
                         </h1>
                         <p class="book-price">
@@ -68,4 +68,14 @@ const getSearchResult = (bookTitles) => {
     })
     .join('');
   searchResult.innerHTML = htmlString;
+
+  const resultTitles = document.querySelectorAll('h1');
+  for (let title of resultTitles) {
+    title.onclick = (e) => {
+      const clickedTitle = e.target.innerText;
+      console.log(clickedTitle);
+      goToInfo(clickedTitle);
+      window.location.href = 'http://localhost:8080/info.html';
+    };
+  }
 };

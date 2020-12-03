@@ -24,37 +24,42 @@ $regular: 400;
 
   header {
     width: auto;
-    height: 500px;
+    height: 300px;
     background-size: 100%;
     background-image: url('../img/background2_700.jpg');
     background-attachment: fixed;
+    position: relative;
     div {
-      position: absolute;
-      top: 200px;
-      right: 50%;
-      z-index: 1;
       font-size: $font-large;
-      font-weight: $bold;
-      color: white;
+      font-weight: $semi-bold;
+      color: $white-Color;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 
   main {
     background-color: $grey-light-Color;
-    padding: 70px 0 70px 0;
+    padding: 50px 0 50px 0;
 
     .container {
-      .search-result {
-        width: 1080px;
-        height: 340px;
-        background-color: $white-Color;
+      width: 80%;
+      #search-result {
         padding: 45px 60px;
         margin-bottom: 30px;
-        &:hover {
-          box-shadow: 0 0 20px rgba(33, 33, 33, 0.2);
-          transition: all 500ms ease;
+        table {
+          margin-bottom: 30px;
+          background-color: $white-Color;
+          &:hover {
+            box-shadow: 0 0 20px rgba(33, 33, 33, 0.2);
+            transition: all 500ms ease;
+          }
         }
+
         td {
+          padding: 30px;
           a:hover {
             text-decoration: none;
           }
@@ -63,6 +68,7 @@ $regular: 400;
               width: 240px;
               height: auto;
               border-radius: 10%;
+              margin: 20px;
             }
           }
           .book-title {
