@@ -21,7 +21,7 @@
 }
 
 * {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -53,6 +53,7 @@
 .book-info {
   margin-top: 56px;
   line-height: 40px;
+  padding: 60px;
 }
 
 .book-info th {
@@ -80,12 +81,19 @@
   padding-top: 56px;
   padding-bottom: 56px;
 }
-
+.book-description .container {
+  border: 1px solid black;
+}
 .book-info h2 {
   font-size: var(--font-large);
   font-weight: var(--bold);
   color: var(--brown-Color);
   margin-bottom: 20px;
+}
+
+.book-info p {
+  font-size: var(--font-medium);
+  line-height: 1.5;
 }
 
 .recommend a:hover {

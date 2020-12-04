@@ -1,0 +1,197 @@
+/* color */
+$brown-Color: #ce7852;
+$dark-black-Color: #191919;
+$black-Color: #333333;
+$grey-Color: #686767;
+$grey-light-Color: #f6f6f6;
+$white-Color: #ffffff;
+
+/* font size */
+$font-giant: 36px;
+$font-large: 24px;
+$font-medium: 16px;
+$font-small: 12px;
+
+/* font weight */
+$bold: 700;
+$semi-bold: 500;
+$regular: 400;
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  padding: 0;
+  margin: 0;
+
+  .slider {
+    .carousel-item {
+      .carousel-caption {
+        h5 {
+          font: {
+            size: $font-giant;
+            weight: $bold;
+          }
+        }
+        a {
+          font: {
+            size: $font-large;
+            weight: $semi-bold;
+          }
+          color: $white-Color;
+        }
+        p {
+          padding-bottom: 150px;
+        }
+      }
+    }
+  }
+
+  .layout8 {
+    h2 {
+      color: $brown-Color;
+      font-weight: $bold;
+    }
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+      img {
+        max-width: 100%;
+        height: 340px;
+        opacity: 1;
+        transition: 0.5s ease;
+        backface-visibility: hidden;
+        &:hover {
+          opacity: 0.3;
+        }
+      }
+      div {
+        transition: 0.5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        &:hover {
+          opacity: 1;
+        }
+      }
+      h5 {
+        color: $black-Color;
+        font-weight: $bold;
+      }
+      p {
+        color: $grey-Color;
+        font-size: $font-medium;
+      }
+    }
+  }
+
+  .menu-buttons {
+    #second-box {
+      background-color: $black-Color;
+      h3,
+      p {
+        color: $grey-light-Color;
+      }
+    }
+    .button-box {
+      padding: 70px 0 60px 0;
+      background-color: $white-Color;
+
+      .icon {
+        position: relative;
+        z-index: 2;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: $brown-Color;
+        margin: 0 auto;
+        img {
+          width: 40px;
+          height: 40px;
+          margin: 15px;
+          filter: invert(100%) sepia(0%) saturate(1844%) hue-rotate(71deg) brightness(113%)
+            contrast(93%);
+        }
+      }
+      h3 {
+        margin: 20px 0 10px 0;
+        font-weight: 500;
+        color: $black-Color;
+        font-size: $font-large;
+      }
+      p {
+        color: $grey-Color;
+        font-size: $font-medium;
+      }
+      a {
+        margin-top: 20px;
+        padding: 10px 20px 10px 20px;
+        border-radius: 5%;
+        border: 2px solid $grey-light-Color;
+        background-color: $grey-light-Color;
+        color: $black-Color;
+        &:hover {
+          background-color: $grey-Color;
+          border: 2px solid $grey-Color;
+          color: $white-Color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  footer {
+    .container {
+      .footer-logo {
+        position: relative;
+        z-index: 2;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: $brown-Color;
+        margin: 0 auto;
+        img {
+          width: 40px;
+          height: 40px;
+          margin: 10px;
+          filter: invert(100%) sepia(0%) saturate(1844%) hue-rotate(71deg) brightness(113%)
+            contrast(93%);
+        }
+      }
+      hr {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        top: -30px;
+        margin-bottom: 10px;
+      }
+      span {
+        font-weight: $bold;
+        color: $brown-Color;
+        font-size: $font-large;
+      }
+    }
+    .footer-contact {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin-bottom: 12px;
+      p {
+        font-size: $font-small;
+        padding-top: 16px;
+        color: $grey-Color;
+        margin: 0;
+      }
+      .footer-icon {
+        padding: 0;
+        margin: 0;
+        i {
+          color: $grey-Color;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
