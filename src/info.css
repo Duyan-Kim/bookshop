@@ -1,0 +1,113 @@
+:root {
+  /* color */
+  --brown-Color: #ce7852;
+  --dark-black-Color: #191919;
+  --grey-light-Color: #f6f6f6;
+  --grey-Color: #686767;
+  --black-Color: #333333;
+  --white-Color: #ffffff;
+
+  /* size */
+  --padding: 24px;
+
+  /* font size */
+  --font-giant: 48px;
+  --font-large: 24px;
+  --font-medium: 18px;
+  --font-small: 12px;
+  --bold: 700;
+  --semi-bold: 500;
+  --regular: 400;
+}
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/* footer */
+.about h2 {
+  color: var(--brown-Color);
+  font-weight: var(--bold);
+}
+
+.about p {
+  color: var(--black-Color);
+  font-weight: var(--semi-bold);
+  font-size: var(--font-medium);
+}
+
+.footer-contact p {
+  font-size: var(--font-small);
+  color: var(--black-Color);
+  font-weight: var(--regular);
+}
+
+.footer-contact i {
+  font-size: var(--font-large);
+  color: var(--grey-Color);
+}
+
+/* search info */
+.book-info {
+  margin-top: 56px;
+  line-height: 40px;
+}
+
+.book-info th {
+  color: var(--grey-Color);
+}
+
+.book-info img {
+  width: 350px;
+  filter: drop-shadow(5px 5px 5px var(--grey-Color));
+}
+
+.book-info h1 {
+  font-size: var(--font-giant);
+  font-weight: var(--bold);
+  color: var(--black-Color);
+}
+
+.book-info .price {
+  font-size: var(--font-large);
+  font-weight: var(--bold);
+  color: var(--brown-Color);
+}
+
+.book-description {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.book-info h2 {
+  font-size: var(--font-large);
+  font-weight: var(--bold);
+  color: var(--brown-Color);
+  margin-bottom: 20px;
+}
+
+.recommend a:hover {
+  text-decoration: none;
+}
+
+.recommend h2 {
+  color: var(--brown-Color);
+  font-weight: var(--bold);
+}
+
+.recommend-item h5 {
+  color: var(--brown-Color);
+  font-weight: var(--semi-bold);
+}
+
+.recommend-item p {
+  color: var(--black-Color);
+  font-size: var(--font-medium);
+}
+
+.recommend-item img {
+  width: 270px;
+  height: 340px;
+}
