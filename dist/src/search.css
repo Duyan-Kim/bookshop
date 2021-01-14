@@ -1,0 +1,67 @@
+:root {
+  /* color */
+  --brown-Color: #ce7852;
+  --dark-black-Color: #191919;
+  --grey-light-Color: #f6f6f6;
+  --grey-Color: #686767;
+  --black-Color: #333333;
+  --white-Color: #ffffff;
+
+  /* size */
+  --padding: 24px;
+
+  /* font size */
+  --font-giant: 48px;
+  --font-large: 24px;
+  --font-medium: 18px;
+  --font-small: 12px;
+  --bold: 700;
+  --semi-bold: 500;
+  --regular: 400;
+}
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/* search */
+.shop .container {
+  margin-top: 150px;
+}
+
+.shop h2 {
+  font-weight: var(--bold);
+  color: var(--brown-Color);
+}
+
+.booklist .book-shortinfo a:hover {
+  text-decoration: none;
+}
+
+.book-shortinfo .book-title {
+  font-weight: var(--bold);
+  color: var(--black-Color);
+  margin-bottom: var(--padding);
+}
+
+.book-shortinfo .book-author,
+.book-publisher,
+.book-publish-date,
+.book-salespoint {
+  font-size: var(--font-medium);
+  font-weight: var(--regular);
+  color: var(--black-Color);
+}
+
+.book-shortinfo .book-price {
+  font-size: var(--font-large);
+  font-weight: var(--semi-bold);
+  color: var(--brown-Color);
+}
+
+.booklist table {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
